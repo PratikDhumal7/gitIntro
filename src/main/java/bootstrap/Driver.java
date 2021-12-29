@@ -5,15 +5,18 @@ import org.apache.log4j.DailyRollingFileAppender;
 import org.apache.log4j.EnhancedPatternLayout;
 import org.apache.log4j.Level;
 import org.apache.log4j.Priority;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Driver {
 
     /**
      Implementation starting here
      */
+    static Logger logger = LoggerFactory.getLogger(Driver.class);
     public static void main(String[] args) throws Exception {
-
-        System.out.println("Hello world!!");
+        configureLogging("var/log/gitIntro/",false);
+        logger.info("Hello World!!");
 
     }
 
