@@ -1,6 +1,7 @@
 package bootstrap;
 
 
+import domain.Student;
 import org.apache.log4j.DailyRollingFileAppender;
 import org.apache.log4j.EnhancedPatternLayout;
 import org.apache.log4j.Level;
@@ -17,6 +18,11 @@ public class Driver {
     public static void main(String[] args) throws Exception {
         configureLogging("var/log/gitIntro/",false);
         logger.info("Hello World!!");
+
+        Student student = new Student();
+        student.setStudentName("Pratik");
+        student.setStudentRollNum("1019115");
+        student.setBranch("Comps");
 
     }
 
